@@ -7,7 +7,6 @@ W tym projekcie ja zająłem się aplikacją mobilną łączącą się z bazą d
 Aplikacja mobilna zawierająca się w naszym projekcie została napisana w języku C# i środowisku Xamarin.  Dodatkowo do aplikacji zostały dołączone odpowiednie paczki NUGET: 
 - Microsoft.AspNet.WebApi.Client (w celu łączenia się z API),
 - Newtonsoft.Json (w celu prostego przenoszenia danych w formacie JSON na obiekt klasy C#).
-- 
 
 -------- OPIS SPISANY Z PLIKÓW PROJEKTOWYCH, AKTUALNIE NIE MOŻNA URUCHOMIĆ Z POWODU BRAKU SERWERA -------------
 
