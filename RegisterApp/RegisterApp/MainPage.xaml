@@ -5,10 +5,28 @@
              x:Class="RegisterApp.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button x:Name="BTN_Reg"
+                Text="Register"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="250"
+                Clicked="BTN_Reg_Clicked"/>
+        <Button x:Name="BTN_Doc"
+                Text="View doctors"
+                WidthRequest="250"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="BTN_Doc_Clicked"/>
+        <Button x:Name="BTN_His"
+                Text="View history"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="250"
+                Clicked="BTN_His_Clicked"/>
+
+        <Button x:Name="BTN_Login"
+                Text="Login"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="250"
+                Clicked="BTN_Login_Clicked"/>
     </StackLayout>
 
 </ContentPage>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RegisterApp.Model;
+using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,17 +9,23 @@ namespace RegisterApp
 {
     public partial class App : Application
     {
+        string _filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "isLogged.txt");
+        string _PESEL = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PESEL.txt");
+
+        
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
-        }
+            ApiHelper.InitializeClient();
 
-        protected override void OnStart()
-        {
-            // Handle when your app starts
+            File.Delete(_filename);
+            File.Delete(_PESEL);
+            
+            MainPage = new NavigationPage(new MainPage());
         }
+        
 
         protected override void OnSleep()
         {

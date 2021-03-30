@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RegisterApp.RegisterQuestion">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutBounds="0, 0.3, 1, .3" AbsoluteLayout.LayoutFlags="All">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="90"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Text="ID"/>
+                <Label Grid.Column="1" Text="ID Doktora"/>
+                <Label Grid.Column="2" Text="Numer pokoju"/>
+                <Label Grid.Column="3" Text="Godzina"/>
+                <Label Grid.Row="1" Text="{Binding Id}"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding IdDoctor}"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding RoomNumber}"/>
+                <Label Grid.Row="1" Grid.Column="3" Text="{Binding Hour}"/>
+            </Grid>
+
+            <Label Text="Czy chcesz sie zapisać na dany termin? "
+                   AbsoluteLayout.LayoutBounds=".5, .88, .8, .3" AbsoluteLayout.LayoutFlags="All"
+                   />
+            <Grid AbsoluteLayout.LayoutBounds="0, .8, 1, .1" AbsoluteLayout.LayoutFlags="All">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BTN_Yes"
+                        Text="Tak"
+                        Clicked="BTN_Yes_Clicked"/>
+                <Button x:Name="BTN_No" Grid.Column="1"
+                        Text="Nie"
+                        Clicked="BTN_No_Clicked"/>
+            </Grid>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RegisterApp.RegisterToPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutBounds="0, 0.3, 1, .3" AbsoluteLayout.LayoutFlags="All">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="ID doktora"/>
+                <Label Grid.Column="1" Text="Godzina"/>
+                <Label Grid.Column="2" Text="Pokój"/>
+                <Label Grid.Row="1" Text="{Binding IdDoctor}"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Hour}" />
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding RoomNumber}" />
+            </Grid>
+
+            <Label Text="Czy chcesz sie zapisać na dany termin? "
+                   AbsoluteLayout.LayoutBounds=".5, .88, .8, .3" AbsoluteLayout.LayoutFlags="All"
+                   />
+            <Grid AbsoluteLayout.LayoutBounds="0, .8, 1, .1" AbsoluteLayout.LayoutFlags="All">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BTN_Yes"
+                        Text="Tak"
+                        Clicked="BTN_Yes_Clicked"/>
+                <Button x:Name="BTN_No" Grid.Column="1"
+                        Text="Nie"
+                        Clicked="BTN_No_Clicked"/>
+            </Grid>
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+</ContentPage>

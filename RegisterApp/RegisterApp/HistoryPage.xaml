@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RegisterApp.HistoryPage"
+             BackgroundColor="Beige">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Text="Doctor's ID"/>
+                <Label Grid.Column="1" Text="Patient's ID"/>
+                <Label Grid.Column="2" Text="Room"/>
+                <Label Grid.Column="3" Text="Hour" />
+            </Grid>
+            <ListView x:Name="listView"
+                  ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                               
+                                <Label Text="{Binding IdDoctor}"/>
+                                <Label Grid.Column="1" Text="{Binding IdPatient}" />
+                                <Label Grid.Column="2" Text="{Binding RoomNumber}" />
+                                <Label Grid.Column="3" Text="{Binding Hour}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="BTN_Del"
+                    Text="Usuń"
+                    Clicked="BTN_Del_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

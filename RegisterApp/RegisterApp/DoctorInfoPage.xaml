@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RegisterApp.DoctorInfoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="ID_Lab" Text="{Binding Id}"/>
+                <Label Grid.Column="1" Text="{Binding Name}"/>
+                <Label Grid.Column="2" Text="{Binding LastName}"/>
+            </Grid>
+            
+            
+            <ListView x:Name="InfoView"
+                      ItemSelected="InfoView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="{Binding IdDoctor}"/>
+                                <Label Grid.Column="1" Text="{Binding Hour}" />
+                                <Label Grid.Column="2" Text="{Binding RoomNumber}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
